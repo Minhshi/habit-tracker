@@ -1,1 +1,24 @@
-<h1>Habits</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+
+      <div class="habits">
+        <h1>Habits</h1>
+        <ul>
+          <% @habits.each do |habit| %>
+          <li><h6>Title: <%= habit.title %> | <%= link_to "Details", habit_path(habit[:id]) %> | <%= link_to "Delete", habit_path(habit[:id]), method: :delete %></h6></li>
+          <ul>
+            <li><h6>Details: <%= habit.details %></h6></li>
+            <li><h6>Category: <%= habit.category %></h6></li>
+          </ul>
+          <% end %>
+        </ul>
+      </div>
+
+      <div class="links">
+        <%= link_to "Add new habit", new_habit_path %>
+      </div>
+
+    </div>
+  </div>
+</div>

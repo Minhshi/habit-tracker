@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+
+      <div class="habits">
+        <h1><%= @habit.title %></h1>
+        <h6>Details: <%= @habit.details %></h6>
+        <h6>Category: <%= @habit.category %></h6>
+      </div>
+
+      <div class="links">
+        <%= link_to "Edit", edit_habit_path %> | <%= link_to "Back", habits_path %>
+      </div>
+
+    </div>
+  </div>
+</div>
