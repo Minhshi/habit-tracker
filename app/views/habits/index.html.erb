@@ -6,18 +6,27 @@
         <h1>Habits</h1>
         <ul>
           <% @habits.each do |habit| %>
-          <li><h6>Title: <%= habit.title %> | <%= link_to "Details", habit_path(habit[:id]) %> | <%= link_to "Delete", habit_path(habit[:id]), method: :delete %></h6></li>
+          <li><h6>Title: <%= habit.title %>
+            <% if policy(habit).edit? %>
+              <%= link_to "Details", habit_path(habit[:id]) %> |
+            <% end %>
+            <% if policy(habit).destroy? %>
+              <%= link_to "Delete", habit_path(habit[:id]), method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
+          </h6></li>
           <ul>
             <li><h6>Details: <%= habit.details %></h6></li>
             <li><h6>Category: <%= habit.category %></h6></li>
-            <% end %>
+            <li><h6>Category: <%= habit.user_id %></h6></li>
           </ul>
           <% end %>
         </ul>
       </div>
 
       <div class="links">
-        <%= link_to "Add new habit", new_habit_path %>
+        <% if policy(Habit).new? %>
+          <%= link_to "Add new habit", new_habit_path %>
+        <% end %>
       </div>
 
     </div>

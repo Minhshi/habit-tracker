@@ -1,11 +1,11 @@
 class HabitsController < ApplicationController
+  before_action :find_habit, only: [:show, :edit, :update, :destroy]
 
   def index
-    @habits = Habit.all
+    @habits = policy_scope(Habit)
   end
 
   def show
-    @habit = Habit.find(params[:id])
   end
 
   def new
@@ -16,19 +16,18 @@ class HabitsController < ApplicationController
   def create
     @habit = Habit.new(habit_params)
     @habit.user = current_user
+    authorize @habit
     if @habit.save
-      redirect_to habits_path
+      redirect_to habit_path(@habit)
     else
       render :new
     end
   end
 
   def edit
-    @habit = Habit.find(params[:id])
   end
 
   def update
-    @habit = Habit.find(params[:id])
     @habit.update(habit_params)
     if @habit.save
       redirect_to habits_path
@@ -38,15 +37,15 @@ class HabitsController < ApplicationController
   end
 
   def destroy
-    @habit = Habit.find(params[:id])
     @habit.delete
     redirect_to habits_path
   end
 
- private
+  private
 
   def find_habit
     @habit = Habit.find(params[:id])
+    authorize @habit
   end
 
   def habit_params
