@@ -1,0 +1,13 @@
+<h1>Places</h1>
+
+<ul>
+  <% @places.each do |place| %>
+  <li>
+    <%= place.name %> |
+    <%= link_to "Show", place_path(place[:id]) %> |
+    <%= link_to "Edit", edit_place_path(place[:id]) %> |
+    <%= link_to "Delete", place_path(place[:id]), method: :delete, data: { confirm: "Are you sure?" }%>
+  </li>
+  <% end %>
+    <%= link_to "New", new_place_path %>
+</ul>
