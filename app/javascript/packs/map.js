@@ -16,10 +16,18 @@ if (mapElement) {
   const markers = JSON.parse(mapElement.dataset.markers);
 
   markers.forEach((marker) => {
-    new mapboxgl.Marker()
+
+    const element = document.createElement('div');
+    element.className = 'marker';
+    element.style.backgroundImage = `url('${marker.image_url}')`;
+    element.style.backgroundSize = 'contain';
+    element.style.width = '25px';
+    element.style.height = '25px';
+
+    new mapboxgl.Marker(element)
     .setLngLat([marker.lng, marker.lat])
     .setPopup(new mapboxgl.Popup({ offset: 25 })
-    .setHTML(marker.infoWindow.content))
+      .setHTML(marker.infoWindow.content))
     .addTo(map);
   })
 
@@ -37,8 +45,8 @@ if (mapElement) {
  }
 
  map.addControl(new MapboxGeocoder({
-    accessToken: mapboxgl.accessToken
-  }));
+  accessToken: mapboxgl.accessToken
+}));
 }
 
 const addressInput = document.getElementById('place_address');
