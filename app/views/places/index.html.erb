@@ -9,5 +9,14 @@
     <%= link_to "Delete", place_path(place[:id]), method: :delete, data: { confirm: "Are you sure?" }%>
   </li>
   <% end %>
-    <%= link_to "New", new_place_path %>
+
+  <%= link_to "New", new_place_path %>
 </ul>
+
+  <div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  ></div>
