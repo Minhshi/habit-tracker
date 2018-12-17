@@ -3,29 +3,30 @@
     <div class="col-sm-6 col-sm-offset-3">
 
       <div class="habits">
-        <h1>Habits</h1>
+        <h1>Habits <%= link_to"", new_habit_path, class: "fas fa-plus" %></h1>
         <ul>
           <% @habits.each do |habit| %>
-          <li><h6>Title: <%= habit.title %>
+          <li><h6><!-- <i class="far fa-sticky-note"></i><%= habit.title %> -->
+            <%= link_to habit.title, habit_path(habit[:id]), class: "far fa-sticky-note"%>
             <% if policy(habit).edit? %>
-              <%= link_to "Details", habit_path(habit[:id]) %> |
+              <%= link_to "", edit_habit_path(habit[:id]), class: "fas fa-pencil-alt" %>
             <% end %>
             <% if policy(habit).destroy? %>
-              <%= link_to "Delete", habit_path(habit[:id]), method: :delete, data: { confirm: 'Are you sure?' } %>
+              <%= link_to "", habit_path(habit[:id]), method: :delete, data: { confirm: 'Are you sure?' }, class: "far fa-trash-alt" %>
             <% end %>
           </h6></li>
           <ul>
-            <li><h6>Details: <%= habit.details %></h6></li>
-            <li><h6>Category: <%= habit.category %></h6></li>
+            <!-- <li><h6>Details: <%= habit.details %></h6></li> -->
+            <!-- <li><h6>Category: <%= habit.category %></h6></li> -->
           </ul>
           <% end %>
         </ul>
       </div>
 
-      <div class="links">
-        <% if policy(Habit).new? %>
-          <%= link_to "Add new habit", new_habit_path %>
-        <% end %>
+     <div class="links">
+        <%# if policy(Habit).new? %>
+          <%#= link_to "Add new habit", new_habit_path %>
+        <%# end %>
       </div>
 
     </div>
