@@ -40,3 +40,12 @@ if (mapElement) {
     accessToken: mapboxgl.accessToken
   }));
 }
+
+const addressInput = document.getElementById('place_address');
+
+if (addressInput) {
+  const places = require('places.js');
+  const placesAutocomplete = places({
+    container: addressInput
+  });
+}
