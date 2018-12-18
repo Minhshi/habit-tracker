@@ -1,3 +1,22 @@
-<h1><%= @place.name %></h1>
-<h5><%= @place.address %></h5>
-<%= link_to "Edit", edit_place_path %> | <%= link_to "Back", places_path %>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= asset_path 'paul-trienekens-419330-unsplash.jpg' %>);">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+
+        <div class="places">
+          <div class="habits-name">
+          <h2><%= @place.name %></h2>
+          </div>
+        <div class="places-address">
+          <i class="fas fa-map-pin"></i></i> <%= @place.address %>
+          </div>
+        </div>
+
+        <div class="links">
+          <%= link_to "Edit", edit_place_path %> | <%= link_to "Back", places_path %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
