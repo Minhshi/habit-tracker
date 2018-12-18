@@ -1,17 +1,23 @@
-<h1>Places</h1>
 
-<ul>
-  <% @places.each do |place| %>
-  <li>
-    <%= place.name %> |
-    <%= link_to "Show", place_path(place[:id]) %> |
-    <%= link_to "Edit", edit_place_path(place[:id]) %> |
-    <%= link_to "Delete", place_path(place[:id]), method: :delete, data: { confirm: "Are you sure?" }%>
-  </li>
-  <% end %>
+<div class="places-container">
 
-  <%= link_to "New", new_place_path %>
-</ul>
+  <div class="col-sm-6">
+    <h2>Places <%= link_to"", new_place_path, class: "fas fa-plus" %></h2>
+    <ul>
+      <% @places.each do |place| %>
+      <li>
+        <%= link_to place.name, place_path(place[:id]), class: "habit-title" %>
+        <br>
+        <%= link_to "", place_path(place[:id]), class: "far fa-sticky-note" %>
+
+        <%= link_to "", edit_place_path(place[:id]), class: "fas fa-pencil-alt" %>
+        <%= link_to "", place_path(place[:id]), method: :delete, data: { confirm: "Are you sure?" }, class: "far fa-trash-alt" %>
+      </li>
+      <% end %>
+    </ul>
+
+  </div>
+
 
   <div
   id="map"
@@ -21,5 +27,4 @@
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
 
-  <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/"           title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"          title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-<div>Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/"           title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"          title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+</div>

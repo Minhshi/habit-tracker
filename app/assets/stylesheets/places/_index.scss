@@ -1,0 +1,9 @@
+.places-container {
+  display: flex;
+}
+#map {
+  flex: 0 0 50%;
+  height: 100vh;
+  // position: sticky !important;
+  top: 75.5px;
+}

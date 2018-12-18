@@ -10,7 +10,7 @@ class PlacesController < ApplicationController
         lng: place.longitude,
         lat: place.latitude,
         infoWindow: { content: render_to_string(partial: "/places/map_window", locals: { place: place }) },
-        image_url: helpers.asset_url('placeholder.png')
+        image_url: helpers.asset_url('Map-Marker-Push-Pin-1-Pink-icon.png')
       }
     end
   end

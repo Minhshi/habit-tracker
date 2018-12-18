@@ -3,10 +3,10 @@
     <div class="col-sm-6 col-sm-offset-3">
 
       <div class="habits">
-        <h1>Habits <%= link_to"", new_habit_path, class: "fas fa-plus" %></h1>
+        <h2>Habits <%= link_to"", new_habit_path, class: "fas fa-plus" %></h2>
         <ul>
           <% @habits.each do |habit| %>
-          <li><h6><!-- <i class="far fa-sticky-note"></i><%= habit.title %> -->
+          <li>
             <%= link_to habit.title, habit_path(habit[:id]), class: "habit-title" %>
             <br>
             <%= link_to "", habit_path(habit[:id]), class: "far fa-sticky-note" %>
@@ -16,7 +16,7 @@
             <% if policy(habit).destroy? %>
               <%= link_to "", habit_path(habit[:id]), method: :delete, data: { confirm: 'Are you sure?' }, class: "far fa-trash-alt" %>
             <% end %>
-          </h6></li>
+          </li>
           <ul>
             <!-- <li><h6>Details: <%= habit.details %></h6></li> -->
             <!-- <li><h6>Category: <%= habit.category %></h6></li> -->
