@@ -30,3 +30,25 @@
 .fa-trash-alt:hover {
   text-decoration: none;
 }
+.links a {
+  color: white;
+}
+.links a:hover {
+  color: white;
+  opacity: 0.7;
+  text-decoration: none;
+}
+.habits {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.habits-title {
+  text-align: center;
+}
+.fa-info-circle {
+  padding-right: 5px;
+}
+.fa-archive {
+  padding-right: 5px;
+}
