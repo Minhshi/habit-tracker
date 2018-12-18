@@ -7,8 +7,9 @@
         <ul>
           <% @habits.each do |habit| %>
           <li><h6><!-- <i class="far fa-sticky-note"></i><%= habit.title %> -->
+            <%= link_to habit.title, habit_path(habit[:id]), class: "habit-title" %>
+            <br>
             <%= link_to "", habit_path(habit[:id]), class: "far fa-sticky-note" %>
-            <%= link_to habit.title, habit_path(habit[:id]) %>
             <% if policy(habit).edit? %>
               <%= link_to "", edit_habit_path(habit[:id]), class: "fas fa-pencil-alt" %>
             <% end %>

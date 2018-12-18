@@ -1,8 +1,33 @@
-.habits ul {
-  list-style-type: none;
-  padding-left: 0px;
+.habit-title {
+  color: grey;
+  text-decoration: none;
+}
+.habit-title:hover {
+  color: darkgrey;
+  text-decoration: none;
+
+}
+.fa-plus {
+  text-decoration: none;
+}
+.fa-plus:hover {
+  text-decoration: none;
 }
 .fa-sticky-note {
-  padding-right: 10px;
-  color: grey;
+  text-decoration: none;
+}
+.fa-sticky-note:hover {
+  text-decoration: none;
+}
+.fa-pencil-alt {
+  text-decoration: none;
+}
+.fa-pencil-alt:hover {
+  text-decoration: none;
+}
+.fa-trash-alt {
+  text-decoration: none;
+}
+.fa-trash-alt:hover {
+  text-decoration: none;
 }
