@@ -1,9 +1,12 @@
 .places-container {
   display: flex;
+  flex-wrap: wrap;
 }
 #map {
   flex: 0 0 50%;
+  min-width: 375px;
   height: 100vh;
   // position: sticky !important;
   top: 75.5px;
 }
+
