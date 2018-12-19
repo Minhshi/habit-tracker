@@ -12,7 +12,7 @@
     <!-- Links when logged in -->
     <%= link_to "Habits", "habits", class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to "Places", "places", class: "navbar-wagon-item navbar-wagon-link" %>
-    <%#= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "Notes", "notes", class: "navbar-wagon-item navbar-wagon-link" %>
 
     <!-- Avatar with dropdown menu -->
     <div class="navbar-wagon-item">
@@ -50,7 +50,7 @@
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
         <%= link_to "Habits", habits_path, class: "navbar-wagon-item navbar-wagon-link" %>
        <%= link_to "Places", places_path, class: "navbar-wagon-item navbar-wagon-link" %>
-       <!-- <li><a href="#">Other one</a></li> -->
+       <%= link_to "Notes", notes_path, class: "navbar-wagon-item navbar-wagon-link" %>
      </ul>
    </div>
  </div>

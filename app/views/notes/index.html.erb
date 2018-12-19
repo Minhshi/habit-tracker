@@ -1,0 +1,20 @@
+<div class="notes-container">
+
+  <div class="col-sm-6">
+    <div class="notes">
+      <h2>Notes <%= link_to"", new_note_path, class: "fas fa-plus icons-plus" %></h2>
+      <ul>
+        <% @notes.each do |note| %>
+        <li>
+          <%= link_to note.title, note_path(note[:id]), class: "icons-title" %>
+          <br>
+          <%= link_to "", note_path(note[:id]), class: "far fa-sticky-note icons-note" %>
+
+          <%= link_to "", edit_note_path(note[:id]), class: "fas fa-pencil-alt icons-pencil" %>
+          <%= link_to "", note_path(note[:id]), method: :delete, data: { confirm: "Are you sure?" }, class: "far fa-trash-alt icons-trash" %>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

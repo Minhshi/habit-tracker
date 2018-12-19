@@ -18,7 +18,7 @@ class HabitsController < ApplicationController
     @habit.user = current_user
     authorize @habit
     if @habit.save
-      redirect_to habit_path(@habit)
+      redirect_to habits_path
     else
       render :new
     end
@@ -30,7 +30,7 @@ class HabitsController < ApplicationController
   def update
     @habit.update(habit_params)
     if @habit.save
-      redirect_to habits_path
+      redirect_to habit_path(@habit)
     else
       render :edit
     end

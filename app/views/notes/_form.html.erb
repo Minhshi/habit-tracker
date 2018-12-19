@@ -1,0 +1,9 @@
+<%= simple_form_for(@note) do |n| %>
+<div class="form-group">
+  <%= n.input :title %>
+</div>
+<div class="form-group">
+  <%= n.input :content %>
+</div>
+<%= n.submit class: "btn btn-success" %>
+<% end %>
