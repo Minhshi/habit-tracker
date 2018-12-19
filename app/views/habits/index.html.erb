@@ -1,26 +1,26 @@
-<div class="container">
+<div class="habits-container">
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
 
       <div class="habits">
-        <h2>Habits <%= link_to"", new_habit_path, class: "fas fa-plus" %></h2>
+        <h2>Habits <%= link_to"", new_habit_path, class: "fas fa-plus icons-plus" %></h2>
         <ul>
           <% @habits.each do |habit| %>
           <li>
-            <%= link_to habit.title, habit_path(habit[:id]), class: "habit-title" %>
+            <%= link_to habit.title, habit_path(habit[:id]), class: "icons-title" %>
             <br>
-            <%= link_to "", habit_path(habit[:id]), class: "far fa-sticky-note" %>
+            <%= link_to "", habit_path(habit[:id]), class: "far fa-sticky-note icons-note" %>
             <% if policy(habit).edit? %>
-              <%= link_to "", edit_habit_path(habit[:id]), class: "fas fa-pencil-alt" %>
+              <%= link_to "", edit_habit_path(habit[:id]), class: "fas fa-pencil-alt icons-pencil" %>
             <% end %>
             <% if policy(habit).destroy? %>
-              <%= link_to "", habit_path(habit[:id]), method: :delete, data: { confirm: 'Are you sure?' }, class: "far fa-trash-alt" %>
+              <%= link_to "", habit_path(habit[:id]), method: :delete, data: { confirm: 'Are you sure?' }, class: "far fa-trash-alt icons-trash" %>
             <% end %>
           </li>
-          <ul>
+          <!-- <ul> -->
             <!-- <li><h6>Details: <%= habit.details %></h6></li> -->
             <!-- <li><h6>Category: <%= habit.category %></h6></li> -->
-          </ul>
+          <!-- </ul> -->
           <% end %>
         </ul>
       </div>
