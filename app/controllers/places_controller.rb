@@ -4,8 +4,8 @@ class PlacesController < ApplicationController
   def index
     # @places = Place.all
     @places = policy_scope(Place)
-    @places = Place.where.not(latitude: nil, longitude: nil)
-    @markers = @places.map do |place|
+    # @places = Place.where.not(latitude: nil, longitude: nil)
+    @markers = @places.where.not(latitude: nil, longitude: nil).map do |place|
       {
         lng: place.longitude,
         lat: place.latitude,

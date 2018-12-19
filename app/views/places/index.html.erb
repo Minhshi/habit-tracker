@@ -1,23 +1,22 @@
 <div class="places-container">
 
   <div class="col-sm-6">
-    <h2>Places <%= link_to"", new_place_path, class: "fas fa-plus icons-plus" %></h2>
-    <ul>
-      <% @places.each do |place| %>
-      <li>
-        <%= link_to place.name, place_path(place[:id]), class: "icons-title" %>
-        <br>
-        <%= link_to "", place_path(place[:id]), class: "far fa-sticky-note icons-note" %>
+    <div class="places">
+      <h2>Places <%= link_to"", new_place_path, class: "fas fa-plus icons-plus" %></h2>
+      <ul>
+        <% @places.each do |place| %>
+        <li>
+          <%= link_to place.name, place_path(place[:id]), class: "icons-title" %>
+          <br>
+          <%= link_to "", place_path(place[:id]), class: "far fa-sticky-note icons-note" %>
 
-        <%= link_to "", edit_place_path(place[:id]), class: "fas fa-pencil-alt icons-pencil" %>
-        <%= link_to "", place_path(place[:id]), method: :delete, data: { confirm: "Are you sure?" }, class: "far fa-trash-alt icons-trash" %>
-      </li>
-      <% end %>
-    </ul>
-
+          <%= link_to "", edit_place_path(place[:id]), class: "fas fa-pencil-alt icons-pencil" %>
+          <%= link_to "", place_path(place[:id]), method: :delete, data: { confirm: "Are you sure?" }, class: "far fa-trash-alt icons-trash" %>
+        </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
-
-
   <div
   id="map"
   style="width: 100%;
