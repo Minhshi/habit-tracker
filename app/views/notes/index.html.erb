@@ -3,6 +3,11 @@
   <div class="col-sm-6">
     <div class="notes">
       <h2>Notes <%= link_to"", new_note_path, class: "fas fa-plus icons-plus" %></h2>
+      <div class="notes-search">
+      <%= form_tag notes_path, method: :get do %>
+      <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Find a note" %>
+      <% end %>
+      </div>
       <ul>
         <% @notes.each do |note| %>
         <li>
