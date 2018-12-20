@@ -2,12 +2,18 @@ class NotesController < ApplicationController
   before_action :find_note, only: [:show, :edit, :update, :destroy]
 
   def index
+    # @notes = policy_scope(Note)
+    # if params[:query].present?
+    #   # @notes = policy_scope(Note).where(title: params[:query])
+    #   # @notes = policy_scope(Note).where("title ILIKE ?", "%#{params[:query]}%")
+    #   # sql_query = "title ILIKE :query OR content ILIKE :query"
+    #   sql_query = "title @@ :query OR content @@ :query"
+    #   @notes = policy_scope(Note).where(sql_query, query: "%#{params[:query]}%")
+    # else
+    #   @notes = policy_scope(Note)
+    # end
     if params[:query].present?
-      # @notes = policy_scope(Note).where(title: params[:query])
-      # @notes = policy_scope(Note).where("title ILIKE ?", "%#{params[:query]}%")
-      # sql_query = "title ILIKE :query OR content ILIKE :query"
-      sql_query = "title @@ :query OR content @@ :query"
-      @notes = policy_scope(Note).where(sql_query, query: "%#{params[:query]}%")
+      @notes = policy_scope(Note).search_by_title_and_content(params[:query])
     else
       @notes = policy_scope(Note)
     end
