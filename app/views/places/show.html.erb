@@ -12,6 +12,17 @@
           </div>
         </div>
 
+        <div id="reviews">
+          <%= pluralize @place.reviews.size, "review" %>
+          <ul>
+          <% @place.reviews.each do |review| %>
+          <li>
+          <%= render 'reviews/show', review: review %></li>
+          <% end %>
+          </ul>
+          <%= render 'reviews/form', place: @place, review: @review %>
+        </div>
+
         <div class="links">
           <%= link_to "Edit", edit_place_path %> | <%= link_to "Back", places_path %>
         </div>
