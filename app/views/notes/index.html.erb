@@ -6,8 +6,8 @@
 
       <div class="notes-search">
       <%= form_tag notes_path, method: :get do %>
-      <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Search" %>
-      <%= submit_tag "Search!" %>
+      <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Find note" %>
+      <%= submit_tag "Search" %>
       <% end %>
       </div>
 

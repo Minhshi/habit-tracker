@@ -3,6 +3,7 @@ class NotesController < ApplicationController
 
   def index
     # @notes = policy_scope(Note)
+
     # if params[:query].present?
     #   # @notes = policy_scope(Note).where(title: params[:query])
     #   # @notes = policy_scope(Note).where("title ILIKE ?", "%#{params[:query]}%")
@@ -12,8 +13,15 @@ class NotesController < ApplicationController
     # else
     #   @notes = policy_scope(Note)
     # end
+
+    # if params[:query].present?
+    #   @notes = policy_scope(Note).search_by_title_and_content(params[:query])
+    # else
+    #   @notes = policy_scope(Note)
+    # end
+
     if params[:query].present?
-      @notes = policy_scope(Note).search_by_title_and_content(params[:query])
+      @notes = policy_scope(Note).search(params[:query])
     else
       @notes = policy_scope(Note)
     end
