@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_20_181957) do
+ActiveRecord::Schema.define(version: 2018_12_20_184803) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,8 +42,6 @@ ActiveRecord::Schema.define(version: 2018_12_20_181957) do
     t.float "latitude"
     t.float "longitude"
     t.bigint "user_id"
-    t.bigint "note_id"
-    t.index ["note_id"], name: "index_places_on_note_id"
     t.index ["user_id"], name: "index_places_on_user_id"
   end
 
@@ -64,6 +62,5 @@ ActiveRecord::Schema.define(version: 2018_12_20_181957) do
 
   add_foreign_key "habits", "users"
   add_foreign_key "notes", "users"
-  add_foreign_key "places", "notes"
   add_foreign_key "places", "users"
 end
