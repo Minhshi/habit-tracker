@@ -5,23 +5,24 @@
 
         <div class="places">
           <div class="places-name">
-          <h2><%= @place.name %></h2>
+            <h2><%= @place.name %></h2>
           </div>
-        <div class="places-address">
-          <i class="fas fa-map-pin icons-pin"></i></i> <%= @place.address %>
+          <div class="places-address">
+            <i class="fas fa-map-pin icons-pin"></i></i> <%= @place.address %>
           </div>
         </div>
 
-        <div id="reviews">
-          <%= pluralize @place.reviews.size, "review" %>
-          <ul>
-          <% @place.reviews.each do |review| %>
-          <li>
-          <%= render 'reviews/show', review: review %></li>
-          <% end %>
-          </ul>
-          <%= render 'reviews/form', place: @place, review: @review %>
+        <div id="count">
+          <%= render 'reviews/count', review: @review %>
         </div>
+
+        <div id="reviews">
+          <% @place.reviews.each do |review| %>
+          <%= render 'reviews/show', review: review %>
+          <% end %>
+        </div>
+
+        <%= render 'reviews/form', place: @place, review: @review %>
 
         <div class="links">
           <%= link_to "Edit", edit_place_path %> | <%= link_to "Back", places_path %>

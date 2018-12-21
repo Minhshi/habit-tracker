@@ -1,0 +1,10 @@
+newReview = "<%= @review.content %>";
+reviews = document.getElementById('reviews');
+reviews.insertAdjacentHTML('beforeend', newReview);
+
+inputBox = document.getElementById('review_content');
+inputBox.value = "";
+
+newCount = "<%= pluralize @place.reviews.size, "review" %>"
+count = document.getElementById("count");
+count.innerHTML = newCount;

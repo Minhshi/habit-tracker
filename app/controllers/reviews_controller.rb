@@ -4,10 +4,25 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.place = @place
     authorize @review
+
+    # if @review.save
+    #   redirect_to place_path(@place)
+    # else
+    #   render 'places/show'
+    # end
+
+    # @review.save
+
     if @review.save
-      redirect_to place_path(@place)
+      respond_to do |format|
+        format.html { redirect_to place_path(@place) }
+        format.js
+      end
     else
-      render 'places/show'
+      respond_to do |format|
+        format.html { render 'places/show' }
+        format.js
+      end
     end
   end
 
