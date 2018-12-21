@@ -7,6 +7,9 @@
           <div class="places-name">
             <h2><%= @place.name %></h2>
           </div>
+          <% if @place.photo.present? %>
+            <%= cl_image_tag @place.photo, height: 300, width: 400, crop: :fill %>
+            <% end %>
           <div class="places-address">
             <i class="fas fa-map-pin icons-pin"></i></i> <%= @place.address %>
           </div>

@@ -1,5 +1,7 @@
 <%= simple_form_for(@place) do |p| %>
 <%= p.input :name %>
 <%= p.input :address %>
+<%= p.input :photo %>
+<%= p.input :photo_cache, as: :hidden %>
 <%= p.submit class: "btn btn-success"%>
 <% end %>
