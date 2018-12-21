@@ -14,6 +14,7 @@ gem 'pg_search'
 gem 'searchkick', '~> 3.0'
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
+gem 'cloudinary', '1.10.1.pre.rc'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
