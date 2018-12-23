@@ -8,4 +8,5 @@ class User < ApplicationRecord
   has_many :habits
   has_many :places
   has_many :notes
+  mount_uploader :photo, PhotoUploader
 end

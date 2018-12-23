@@ -3,3 +3,9 @@ First Name <%= @user.first_name %>
 Last Name: <%= @user.last_name %>
 <br>
 Email: <%= @user.email%>
+
+<%= render "users/form", user: @user %>
+
+  <% if @user.photo.present? %>
+            <%= cl_image_tag @user.photo, height: 300, width: 400, crop: :fill %>
+            <% end %>
