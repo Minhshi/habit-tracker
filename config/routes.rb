@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :reviews, only: :create
   end
   resources :notes
-  resources :users, only: [:show, :edit, :update]
+  resources :users, only: [:edit, :update]
   # get "profile" => "users#show", :as => 'profile'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
