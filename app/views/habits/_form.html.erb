@@ -8,5 +8,12 @@
 <div class="form-group">
   <%= h.input :category, :collection => ["personal", "work", "health"] %>
 </div>
+<div class="form-group">
+  <%= h.input :start_time, as: :date %>
+</div>
+<div class="form-group">
+  <%= h.input :end_time, as: :date %>
+</div>
+raise
 <%= h.submit class: "btn btn-success" %>
 <% end %>

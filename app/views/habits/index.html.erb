@@ -25,10 +25,17 @@
         </ul>
       </div>
 
-      <div class="month_calendar">
-        <%= month_calendar do |date| %>
-        <%= date.day %>
+
+      <div class="week_calendar">
+        <%= week_calendar events: @habits do |date, habits| %>
+        <%= date %>
+        <% habits.each do |habit| %>
+        <div>
+          <%= habit.title %>
+        </div>
         <% end %>
+        <% end %>
+
       </div>
 
       <div class="links">
