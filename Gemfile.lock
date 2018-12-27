@@ -209,6 +209,8 @@ GEM
       activemodel (>= 4.2)
       elasticsearch (>= 5)
       hashie
+    simple_calendar (2.3.0)
+      rails (>= 3.0)
     simple_form (4.1.0)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
@@ -276,6 +278,7 @@ DEPENDENCIES
   redis
   sassc-rails
   searchkick (~> 3.0)
+  simple_calendar (~> 2.0)
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)

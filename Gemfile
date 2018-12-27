@@ -16,6 +16,7 @@ gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
 gem 'cloudinary', '1.10.1.pre.rc'
 gem 'carrierwave', '~> 1.2'
+gem "simple_calendar", "~> 2.0"
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
