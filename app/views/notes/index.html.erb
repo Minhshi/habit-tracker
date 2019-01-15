@@ -1,13 +1,13 @@
 <div class="notes-container">
 
-  <div class="col-sm-6">
+  <div class="col-sm-4 col-sm-offset-4">
     <div class="notes">
       <h2>Notes <%= link_to"", new_note_path, class: "fas fa-plus icons-plus" %></h2>
 
       <div class="notes-search">
       <%= form_tag notes_path, method: :get do %>
       <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Find note" %>
-      <%= submit_tag "Search" %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
       <% end %>
       </div>
 
