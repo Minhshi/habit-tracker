@@ -45,5 +45,13 @@
       </ul>
     </td>
   </tr>
+  <tr>
+    <td><img src="https://res.cloudinary.com/dmadox5xe/image/upload/c_scale,w_500/v1547576222/Habit%20Tracker/screencapture-localhost-3000-profile-2019-01-15-19_16_36.png" alt=""></td>
+    <td>
+      <ul>
+        <li>See and Edit account details if needed</li>
+      </ul>
+    </td>
+  </tr>
 </table>
 
