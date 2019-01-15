@@ -8,7 +8,7 @@
       <ul>
         <% @habits.each do |habit| %>
         <li>
-          <%= link_to habit.title, habit_path(habit[:id]), class: "icons-title" %>
+          <%= link_to habit.title, habit_path(habit[:id]), class: "icons-title-habits" %>
           <br>
           <%= link_to "", habit_path(habit[:id]), class: "far fa-sticky-note icons-note" %>
           <% if policy(habit).edit? %>
@@ -48,3 +48,4 @@
     </div>
 
   </div>
+</div>
