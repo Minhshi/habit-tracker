@@ -28,10 +28,20 @@
     <td><img src="https://res.cloudinary.com/dmadox5xe/image/upload/c_scale,w_500/v1547575519/Habit%20Tracker/screencapture-localhost-3000-places-2019-01-15-19_04_16.png" alt=""><br><img src="https://res.cloudinary.com/dmadox5xe/image/upload/c_scale,w_500/v1547575792/Habit%20Tracker/screencapture-localhost-3000-places-2019-01-15-19_09_22.png" alt=""></td>
     <td>
       <ul>
-        <li>See all places with custom marker in map (Mapbox)</li>
+        <li>See all places with custom marker on map (Mapbox)</li>
         <li>Add, Edit and Delete place as needed</li>
         <li>Upload photo of a place</li>
         <li>Search within map (Mapbox) and set marker</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td><img src="https://res.cloudinary.com/dmadox5xe/image/upload/c_scale,w_500/v1547575959/Habit%20Tracker/screencapture-localhost-3000-notes-2019-01-15-19_12_14.png" alt=""><br><img src="https://res.cloudinary.com/dmadox5xe/image/upload/c_scale,w_500/v1547576102/Habit%20Tracker/screencapture-localhost-3000-notes-2019-01-15-19_14_37.png" alt=""></td>
+    <td>
+      <ul>
+        <li>See all notes</li>
+        <li>Add, Edit and Delete note as needed</li>
+        <li>Search through notes, even if misspelled</li>
       </ul>
     </td>
   </tr>
