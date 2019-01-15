@@ -8,6 +8,8 @@
         <li>
           <%= link_to place.name, place_path(place[:id]), class: "icons-title" %>
           <br>
+          <%= cl_image_tag(place.photo, :width => 100) %>
+          <br>
           <%= link_to "", place_path(place[:id]), class: "far fa-sticky-note icons-note" %>
 
           <%= link_to "", edit_place_path(place[:id]), class: "fas fa-pencil-alt icons-pencil" %>
