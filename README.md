@@ -15,6 +15,13 @@
       </ul>
     </td>
   </tr>
-
+<tr>
+    <td><img src="https://res.cloudinary.com/dmadox5xe/image/upload/c_scale,w_500/v1547575263/Habit%20Tracker/screencapture-localhost-3000-habits-2019-01-15-19_00_32.png" alt=""></td>
+    <td>
+      <ul>
+        <li>See all habits and relevant dates in calendar</li>
+      </ul>
+    </td>
+  </tr>
 </table>
 

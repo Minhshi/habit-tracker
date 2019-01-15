@@ -1,5 +1,5 @@
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= asset_path 'rawpixel-577482-unsplash.jpg' %>);">
-<div class="habits-container">
+<div class="container">
 
   <div class="col-sm-6 col-sm-offset-3">
 
@@ -33,6 +33,7 @@
         <% habits.each do |habit| %>
         <div>
           <%= habit.title %>
+
         </div>
         <% end %>
         <% end %>
